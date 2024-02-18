@@ -12,17 +12,12 @@ int main(){
   init();
   int N;
   cin >> N;
-  long long arr[N], res[N];
+  long long arr[N], sum=0;
   for (int i = 0; i < N; i++)
   {
     cin >> arr[i];
-    if (i == 0)
-    {
-      res[i] = arr[i];
-      continue;
-    }
-    res[i] = arr[i] + res[i - 1];
+    sum+=arr[i];
   }
-  cout << abs(res[N - 1]) << endl;
+  cout << abs(sum) << endl;
   return 0;
 }
